@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Weather application</title>
+
+  <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+
+</head>
+
+<body>
+
+  <h1>Rock, Paper, or Scissors?</h1>
+
+  <p>A steam-powered bot has challenged you to a game.
+    <strong>Rock</strong> beats
+    <strong>scissors</strong>,
+    <strong>scissors</strong> beats
+    <strong>paper</strong>, and
+    <strong>paper</strong> beats
+    <strong>rock</strong>.</p>
+
+  <div class="scoreboard">
+    <h2>Scoreboard</h2>
+
+    <div class="scores">
+      <div>
+        <div id="humanScore" class="score">0</div>
+        <div>You</div>
+      </div>
+      <div>
+        <div id="computerScore" class="score">0</div>
+        <div>Bot</div>
+      </div>
+    </div>
+
+  </div>
+
+  <h2>Choose Wisely</h2>
+
+  <button id="rock">Rock</button>
+
+  <button id="paper">Paper</button>
+
+  <button id="scissors">Scissors</button>
+
+
+  <div id="status"></div>
+
+  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'></script>
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>

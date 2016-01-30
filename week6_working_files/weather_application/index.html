@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Weather application</title>
+
+  <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+
+</head>
+
+<body>
+
+  <h1>Weather Application</h1>
+
+  <h3>Please input a temperature in Celsius</h3>
+
+  <form>
+    <label for="temp">Temperature:</label>
+    <input id="temp" type="number" value="20"></input>
+
+    <!-- NB setting type="button" prevents a form submit auto page refresh -->
+    <button type="button" id="submit">Submit</button>
+  </form>
+
+  <div>
+    <img id="weatherImage">
+  </div>
+  <p id="resultMessage"></p>
+
+  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'></script>
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>
