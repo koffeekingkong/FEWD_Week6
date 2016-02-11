@@ -16,26 +16,28 @@ function updateImage(celsius){
   }else if(celsius < breakpointCelsius){
     imgSrc = "images/cold.jpeg";
   }
-  $(weatherImage).attr("src",imgSrc);
+  $("#weatherImage").attr("src",imgSrc);
 }
 
 //write a function to update the result message that is displayed below the image
 //the message template should be:
 // "N°C (N°F). That's (hot OR cold)!"
 function updateResultMessage(celsius, fahrenheit){
-  var htmlStr = celsius+"°C (" + fahrenheit ")°F." "That's";
-  if (celsius >= breakpointCelsius){
-    htmlStr += "cold";
+  var htmlStr = celsius+"°C ("+ fahrenheit +"°F). That's ";
+  if(celsius >= breakpointCelsius){
+    htmlStr += "hot!";
+  }else if (celsius < breakpointCelsius){
+    htmlStr += "cold!";
   }
-  else if (celsius < breakpointCelsius){
-    htmlStr += "hot";
-  }
-
-  $("resultMessage")
+  $("#resultMessage").html(htmlStr);
 }
 
 //write a click handler function for the submit button that brings everything together
-$("#submit").click(function(){
+$("#submit").click(function(e){
 
+  var celsius = parseFloat($("#temp").val());
+  var fahrenheit = convertToFahrenheit(celsius);
 
+  updateImage(celsius);
+  updateResultMessage(celsius, fahrenheit);
 });
